@@ -17,3 +17,6 @@ segno #url to scaner
 pillow # helps in image preprocessing
 
 streamlit
+
+librosa #load, edit, and manage audio files
+resemblyzer # calculate embeddings of the audio files
