@@ -6,6 +6,3 @@ base = "light"
 backgroundColor = "#E6E6FA"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#000000"
-
-[client]
-toolbarMode = "off"
