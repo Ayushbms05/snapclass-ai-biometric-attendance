@@ -14,12 +14,29 @@ def main():
     
     st.markdown("""
         <style>
-        footer {visibility: hidden; display: none !important;}
-        [data-testid="stStatusWidget"] {display: none !important;}
-        [data-testid="stToolbar"] {display: none !important;}
-        div[class*="stAppToolbar"] {display: none !important;}
-        div[class*="viewerBadge"] {display: none !important;}
-        div[class*="stActionButton"] {display: none !important;}
+        /* Hide standard Streamlit header and footer */
+        #MainMenu, footer, header {
+            visibility: hidden !important;
+            display: none !important;
+        }
+        
+        /* Target Streamlit Cloud badges & toolbar containers */
+        [data-testid="stToolbar"],
+        [data-testid="stHeader"],
+        [data-testid="stStatusWidget"],
+        div[class*="viewerBadge"],
+        div[class*="stActionButton"],
+        div[class*="stAppToolbar"],
+        div[class*="styles_viewerBadge"],
+        div[class*="profileBadge"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Hide floating bottom-right badges */
+        div[style*="position: fixed"][style*="bottom"] {
+            display: none !important;
+        }
         </style>
     """, unsafe_allow_html=True)
 
