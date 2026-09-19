@@ -11,6 +11,13 @@ def main():
         page_icon="https://i.ibb.co/YTYGn5qV/logo.png"
 
     )
+    st.markdown("""
+        <style>
+        footer {visibility: hidden;}
+        div[class*="viewerBadge"] {display: none !important;}
+        </style>
+    """, unsafe_allow_html=True)
+    
     if 'login_type' not in st.session_state:
         st.session_state['login_type'] = None
 
