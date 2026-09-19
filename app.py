@@ -11,13 +11,18 @@ def main():
         page_icon="https://i.ibb.co/YTYGn5qV/logo.png"
 
     )
+    
     st.markdown("""
         <style>
-        footer {visibility: hidden;}
+        footer {visibility: hidden; display: none !important;}
+        [data-testid="stStatusWidget"] {display: none !important;}
+        [data-testid="stToolbar"] {display: none !important;}
+        div[class*="stAppToolbar"] {display: none !important;}
         div[class*="viewerBadge"] {display: none !important;}
+        div[class*="stActionButton"] {display: none !important;}
         </style>
     """, unsafe_allow_html=True)
-    
+
     if 'login_type' not in st.session_state:
         st.session_state['login_type'] = None
 
