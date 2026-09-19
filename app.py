@@ -12,33 +12,6 @@ def main():
 
     )
     
-    st.markdown("""
-        <style>
-        /* Hide standard Streamlit header and footer */
-        #MainMenu, footer, header {
-            visibility: hidden !important;
-            display: none !important;
-        }
-        
-        /* Target Streamlit Cloud badges & toolbar containers */
-        [data-testid="stToolbar"],
-        [data-testid="stHeader"],
-        [data-testid="stStatusWidget"],
-        div[class*="viewerBadge"],
-        div[class*="stActionButton"],
-        div[class*="stAppToolbar"],
-        div[class*="styles_viewerBadge"],
-        div[class*="profileBadge"] {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        /* Hide floating bottom-right badges */
-        div[style*="position: fixed"][style*="bottom"] {
-            display: none !important;
-        }
-        </style>
-    """, unsafe_allow_html=True)
 
     if 'login_type' not in st.session_state:
         st.session_state['login_type'] = None
