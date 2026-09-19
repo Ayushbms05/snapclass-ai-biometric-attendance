@@ -35,9 +35,18 @@ def style_base_layout():
         @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
         
         /* Hide toolbar of streamlit */      
-        #MainMenu, footer, header {
-            visibility: hidden;
+        header, footer, [data-testid="stHeader"], [data-testid="stToolbar"], [data-testid="stStatusWidget"] {
+            display: none !important;
+            visibility: hidden !important;
         }
+
+        .stAppViewerToolbar, 
+        div[class*="stAppViewerToolbar"], 
+        div[class*="viewerBadge"],
+        div[data-testid="stElementToolbar"] {
+            display: none !important;
+        }
+        
         .block-container {
             padding-top: 1.5rem !important;
         }
