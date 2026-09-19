@@ -56,6 +56,12 @@ def style_base_layout():
             margin-bottom: 0rem !important;
             color: #E0E3FF;
         }
+        div[data-testid="stDialog"] h2 {
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 1.75rem !important;
+            font-weight: 700 !important;
+            color: #1E293B !important;
+        }
 
         h3, h4, p {
             font-family: 'Outfit', sans-serif;
